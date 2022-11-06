@@ -55,6 +55,13 @@ function App() {
       {users.map((user, i) => (
           <div key={i}>
             <p>Name: {user.name} Age: {user.age} <button onClick={(e)=> {updateUser(user.id, user.age)}}> age +1</button> <button onClick={(e)=> {deleteUser(user.id)}} >delete</button></p> 
+            <p>Childs:</p>
+            <ol>
+              {user.childs.map((child, i) => (
+                <li key={i}> Name: {child.name}, Age: {child.age}</li> 
+              ))}
+            </ol>
+            
           </div>
       ))}
     </div>
